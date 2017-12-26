@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Pathfinder Rolling Site</h2>
+
+<p>Every time you click the button, a new item is rolled from the d20pfsrd.com tables</p>
+
+<button onclick="document.getElementById('demo').innerHTML = getMagicItem() ">Click Me</button>
+
+<p id="demo"></p>
+
+<script>
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+function getMagicItem(){
+	var ret_val;
+	var num = getRndInteger(1,100);
+	if(num>=1&&num<=5){
+		ret_val = getArmor();
+	}else if(num>=6&&num<=10){
+		ret_val = getShield();
+	}else if(num>=11&&num<=20){
+		ret_val = "Weapons";
+	}else if(num>=21&&num<=30){
+		ret_val = "Potions";
+	}else if(num>=31&&num<=40){
+		ret_val = "Rings";
+	}else if(num>=41&&num<=50){
+		ret_val = "Rods";
+	}else if(num>=51&&num<=65){
+		ret_val = "Scrolls";
+	}else if(num>=66&&num<=68){
+		ret_val = "Staves";
+	}else if(num>=69&&num<=83){
+		ret_val = "Wands";
+	}else if(num>=84&&num<=100){
+		ret_val = "Wondrous";
+	}else{
+		ret_val = num;
+	}
+	// ret_val += num;
+	// console.log(ret_val);
+	return ret_val;
+}
+
+//##############################           ARMOR
+
+function getArmor(){
+	var ret_val;
+	var num = getRndInteger(1,100);
+	var item = "Armor";
+
+	if(num>=1&&num<=10){
+		ret_val = "+1 "+item;
+	}else if(num>=11&&num<=20){
+		ret_val = "+2 "+item;
+	}else if(num>=21&&num<=32){
+		ret_val = "+3 "+item;
+	}else if(num>=33&&num<=44){
+		ret_val = "+1 "+item+" "+getArmorSpecialAbilityOne();
+	}else if(num>=45&&num<=56){
+		ret_val = "+1 "+item+" "+getArmorSpecialAbilityOne()+" "+getArmorSpecialAbilityOne();
+	}else if(num>=57&&num<=68){
+		ret_val = "+1 "+item+" "+getArmorSpecialAbilityTwo();
+	}else if(num>=69&&num<=80){
+		ret_val = "+2 "+item+" "+getArmorSpecialAbilityOne();
+	}else if(num>=81&&num<=100){
+		ret_val = getLesserMediumSpecificArmor();
+	}else{
+		ret_val = num;
+	}
+	return ret_val;
+}
+function getArmorSpecialAbilityOne(){
+	var ret_val;
+	var num = getRndInteger(1,100);
+
+	if(num>=1&&num<=06){
+		ret_val = "Benevolent";
+	}else if(num>=07&&num<=12){
+		ret_val = "Poison-Resistant";
+	}else if(num>=13&&num<=18){
+		ret_val = "Balanced";
+	}else if(num>=19&&num<=24){
+		ret_val = "Bitter";
+	}else if(num>=25&&num<=30){
+		ret_val = "Bolstering";
+	}else if(num>=31&&num<=36){
+		ret_val = "Brawling";
+	}else if(num>=37&&num<=42){
+		ret_val = "Champion";
+	}else if(num>=43&&num<=48){
+		ret_val = "Dastard";
+	}else if(num>=49&&num<=54){
+		ret_val = "Deathless";
+	}else if(num>=55&&num<=60){
+		ret_val = "Defiant";
+	}else if(num>=61&&num<=66){
+		ret_val = "Fortification (light)";
+	}else if(num>=67&&num<=71){
+		ret_val = "Grinding";
+	}else if(num>=72&&num<=76){
+		ret_val = "Impervious";
+	}else if(num>=77&&num<=82){
+		ret_val = "Mirrored";
+	}else if(num>=83&&num<=88){
+		ret_val = "Spell-storing";
+	}else if(num>=89&&num<=94){
+		ret_val = "Stanching";
+	}else if(num>=95&&num<=100){
+		ret_val = "Warding";
+	}else{
+		ret_val = num;
+	}
+	return ret_val;
+}
+function getArmorSpecialAbilityTwo(){
+	var ret_val;
+	var num = getRndInteger(1,100);
+
+	if(num>=1&&num<=12){
+		ret_val = "Glamered";
+	}else if(num>=13&&num<=24){
+		ret_val = "Jousting";
+	}else if(num>=25&&num<=38){
+		ret_val = "Shadow";
+	}else if(num>=39&&num<=52){
+		ret_val = "Slick";
+	}else if(num>=53&&num<=64){
+		ret_val = "Expeditious";
+	}else if(num>=65&&num<=76){
+		ret_val = "Creeping";
+	}else if(num>=77&&num<=88){
+		ret_val = "Rallying";
+	}else if(num>=89&&num<=100){
+		ret_val = "Spell-Resistance";
+	}else{
+		ret_val = num;
+	}
+	return ret_val;
+}
+function getLesserMediumSpecificArmor(){
+	var ret_val;
+	var num = getRndInteger(1,100);
+
+	if(num>=1&&num<=33){
+		ret_val = "Elven Chain";
+	}else if(num>=34&&num<=66){
+		ret_val = "Rhino Hide";
+	}else if(num>=67&&num<=100){
+		ret_val = "Morlock Hide";
+	}else{
+		ret_val = num;
+	}
+	return ret_val;
+}
+
+//##############################           SHIELD
+
+function getShield(){
+	var ret_val;
+	var num = getRndInteger(1,100);
+	var item = "Shield";
+
+	if(num>=1&&num<=10){
+		ret_val = "+1 "+item;
+	}else if(num>=11&&num<=20){
+		ret_val = "+2 "+item;
+	}else if(num>=21&&num<=32){
+		ret_val = "+3 "+item;
+	}else if(num>=33&&num<=44){
+		ret_val = "+1 "+item+" "+getShieldSpecialAbilityOne();
+	}else if(num>=45&&num<=56){
+		ret_val = "+1 "+item+" "+getShieldSpecialAbilityOne()+" "+getShieldSpecialAbilityOne();
+	}else if(num>=57&&num<=68){
+		ret_val = "+1 "+item+" "+getShieldSpecialAbilityTwo();
+	}else if(num>=69&&num<=80){
+		ret_val = "+2 "+item+" "+getShieldSpecialAbilityOne();
+	}else if(num>=81&&num<=100){
+		ret_val = getLesserMediumSpecificShield();
+	}else{
+		ret_val = num;
+	}
+	return ret_val;
+}
+function getShieldSpecialAbilityOne(){
+	var ret_val;
+	var num = getRndInteger(1,100);
+
+	if(num>=1&&num<=10){
+		ret_val = "Poison-Resistant";
+	}else if(num>=11&&num<=19){
+		ret_val = "Arrow Catching";
+	}else if(num>=20&&num<=28){
+		ret_val = "Bashing";
+	}else if(num>=29&&num<=37){
+		ret_val = "Blinding";
+	}else if(num>=38&&num<=46){
+		ret_val = "Clangorous";
+	}else if(num>=47&&num<=55){
+		ret_val = "Defiant";
+	}else if(num>=56&&num<=64){
+		ret_val = "Fortification (light)";
+	}else if(num>=65&&num<=73){
+		ret_val = "Grinding";
+	}else if(num>=74&&num<=82){
+		ret_val = "Impervious";
+	}else if(num>=83&&num<=91){
+		ret_val = "Mirrored";
+	}else if(num>=92&&num<=100){
+		ret_val = "Ramming";
+	}else{
+		ret_val = num;
+	}
+	return ret_val;
+}
+function getShieldSpecialAbilityTwo(){
+	var ret_val;
+	var num = getRndInteger(1,100);
+
+	if(num>=1&&num<=15){
+		ret_val = "Rallying";
+	}else if(num>=16&&num<=30){
+		ret_val = "Wyrmsbreath";
+	}else if(num>=31&&num<=50){
+		ret_val = "Animated";
+	}else if(num>=51&&num<=67){
+		ret_val = "Arrow Deflection";
+	}else if(num>=68&&num<=82){
+		ret_val = "Merging";
+	}else if(num>=83&&num<=100){
+		ret_val = "Spell-Resistance";
+	}else{
+		ret_val = num;
+	}
+	return ret_val;
+}
+function getLesserMediumSpecificShield(){
+	var ret_val;
+	var num = getRndInteger(1,100);
+
+	if(num>=1&&num<=35){
+		ret_val = "Spined Shield";
+	}else if(num>=36&&num<=50){
+		ret_val = "Dragonslayers Shield";
+	}else if(num>=51&&num<=65){
+		ret_val = "Collapsible Tower";
+	}else if(num>=66&&num<=100){
+		ret_val = "Lion's Shield";
+	}else{
+		ret_val = num;
+	}
+	return ret_val;
+}
+
+
+//##############################           WEAPON
+
+
+
+//##############################           POTIONS
+
+
+
+//##############################           RINGS
+
+
+
+//##############################           RODS
+
+
+
+//##############################           SCROLLS
+
+
+
+//##############################           STAVES
+
+
+
+//##############################           WANDS
+
+
+
+//##############################           WONDROUS
+
+
+
+</script>
+
+</body>
+</html>
