@@ -24,7 +24,7 @@ function getMagicItem(){
 	}else if(num>=11&&num<=20){
 		ret_val = getWeapon();
 	}else if(num>=21&&num<=30){
-		ret_val = "Potions";
+		ret_val = getPotion();
 	}else if(num>=31&&num<=40){
 		ret_val = "Rings";
 	}else if(num>=41&&num<=50){
@@ -207,13 +207,13 @@ function getShield(){
 	}else if(num>=21&&num<=32){
 		ret_val = "+3 "+item;
 	}else if(num>=33&&num<=44){
-		ret_val = "+1 "+item+" "+getShieldSpecialAbilityOne();
+		ret_val = "+1 "+getShieldSpecialAbilityOne()+" "+item;
 	}else if(num>=45&&num<=56){
-		ret_val = "+1 "+item+" "+getShieldSpecialAbilityOne()+" "+getShieldSpecialAbilityOne();
+		ret_val = "+1 "+getShieldSpecialAbilityOne()+" "+getShieldSpecialAbilityOne()+" "+item;
 	}else if(num>=57&&num<=68){
-		ret_val = "+1 "+item+" "+getShieldSpecialAbilityTwo();
+		ret_val = "+1 "+getShieldSpecialAbilityTwo()+" "+item;
 	}else if(num>=69&&num<=80){
-		ret_val = "+2 "+item+" "+getShieldSpecialAbilityOne();
+		ret_val = "+2 "+getShieldSpecialAbilityOne()+" "+item;
 	}else if(num>=81&&num<=100){
 		ret_val = getLesserMediumSpecificShield();
 	}else{
@@ -329,15 +329,15 @@ function getWeapon(){
 	}else if(num>=21&&num<=32){
 		ret_val = "+3 "+item;
 	}else if(num>=33&&num<=44){
-		ret_val = "+1 "+item+" "+getWeaponSpecialAbilityOne();
+		ret_val = "+1 "+getWeaponSpecialAbilityOne()+" "+item;
 	}else if(num>=45&&num<=56){
-		ret_val = "+1 "+item+" "+getArmorSpecialAbilityOne()+" "+getArmorSpecialAbilityOne();
+		ret_val = "+1 "+getWeaponSpecialAbilityOne()+" "+getWeaponSpecialAbilityOne()+" "+item;
 	}else if(num>=57&&num<=68){
-		ret_val = "+1 "+item+" "+getArmorSpecialAbilityTwo();
+		ret_val = "+1 "+getWeaponSpecialAbilityOne()+" "+item;
 	}else if(num>=69&&num<=80){
-		ret_val = "+2 "+item+" "+getArmorSpecialAbilityOne();
+		ret_val = "+2 "+getWeaponSpecialAbilityOne()+" "+item;
 	}else if(num>=81&&num<=100){
-		ret_val = getLesserMediumSpecificArmor();
+		ret_val = getLesserMediumSpecificWeapon();
 	}else{
 		ret_val = num;
 	}
@@ -490,12 +490,218 @@ function getWeaponTypeMartial(){
 	}
 	return ret_val;
 }
+function getWeaponTypeExotic(){
+	var ret_val;
+	var num = getRndInteger(1,100);
 
+	if(num>=1&&num<=5){
+		ret_val = "Axe, orc double";
+	}else if(num>=6&&num<=10){
+		ret_val = "Bolas";
+	}else if(num>=11&&num<=15){
+		ret_val = "Chain, Spiked";
+	}else if(num>=16&&num<=20){
+		ret_val = "Hand Crossbow";
+	}else if(num>=21&&num<=23){
+		ret_val = "Bolts, Hand Crossbow(20)";
+	}else if(num>=24&&num<=26){
+		ret_val = "Crossbow, Repeating Heavy";
+	}else if(num>=27&&num<=29){
+		ret_val = "Crossbow, Repeating Light";
+	}else if(num>=30&&num<=32){
+		ret_val = "Bolts, Repeating Crossbow(20)";
+	}else if(num>=33&&num<=37){
+		ret_val = "Elven Curved Blade";
+	}else if(num>=38&&num<=42){
+		ret_val = "Dire Flail";
+	}else if(num>=43&&num<=47){
+		ret_val = "Gnome Hooked Hammer";
+	}else if(num>=48&&num<=52){
+		ret_val = "Kama";
+	}else if(num>=53&&num<=55){
+		ret_val = "Net";
+	}else if(num>=56&&num<=60){
+		ret_val = "Nunchaku";
+	}else if(num>=61&&num<=65){
+		ret_val = "Sai";
+	}else if(num>=66&&num<=70){
+		ret_val = "Shuriken(5)";
+	}else if(num>=71&&num<=74){
+		ret_val = "Siangham";
+	}else if(num>=75&&num<=79){
+		ret_val = "Halfling Sling Staff";
+	}else if(num>=80&&num<=82){
+		ret_val = "Bullets, sling(20)";
+	}else if(num>=83&&num<=86){
+		ret_val = "Bastard Sword";
+	}else if(num>=87&&num<=90){
+		ret_val = "Two-Bladed Sword";
+	}else if(num>=91&&num<=93){
+		ret_val = "Dwarven Urgrosh";
+	}else if(num>=94&&num<=96){
+		ret_val = "Dwarven Waraxe";
+	}else if(num>=97&&num<=100){
+		ret_val = "Whip";
+	}else{
+		ret_val = num;
+	}
+	return ret_val;
+}
+function getWeaponSpecialAbilityOne(){
+	var ret_val;
+	var num = getRndInteger(1,100);
+
+	if(num>=1&&num<=8){
+		ret_val = "Bane";
+	}else if(num>=9&&num<=16){
+		ret_val = getWeaponSpecialAbilityOne();//"Distance"; // 
+	}else if(num>=17&&num<=28){
+		ret_val = "Flaming";
+	}else if(num>=29&&num<=40){
+		ret_val = "Frost";
+	}else if(num>=41&&num<=42){
+		ret_val = "Merciful";
+	}else if(num>=43&&num<=47){
+		ret_val = getWeaponSpecialAbilityOne();//"Returning"; //
+	}else if(num>=48&&num<=59){
+		ret_val = "Shock";
+	}else if(num>=60&&num<=64){
+		ret_val = getWeaponSpecialAbilityOne();//"Seeking";//
+	}else if(num>=65&&num<=68){
+		ret_val = "Thundering";
+	}else if(num>=69&&num<=71){
+		ret_val = "Anarchic";
+	}else if(num>=72&&num<=74){
+		ret_val = "Axiomatic";
+	}else if(num>=75&&num<=79){
+		ret_val = "Flaming Burst";
+	}else if(num>=80&&num<=82){
+		ret_val = "Holy";
+	}else if(num>=83&&num<=87){
+		ret_val = "Icy Burst";
+	}else if(num>=88&&num<=92){
+		ret_val = "Shocking Burst";
+	}else if(num>=93&&num<=95){
+		ret_val = "Unholy";
+	}else if(num>=96&&num<=100){
+		ret_val = getWeaponSpecialAbilityOne() +" "+ getWeaponSpecialAbilityOne();
+	}else{
+		ret_val = num;
+	}
+	return ret_val;
+}
 
 //##############################           POTIONS
 
+function getPotion(){
+	var ret_val;
+	var num = getRndInteger(1,100);
 
+	if(num>=1&&num<=20){
+		ret_val = get0LevelPotion();
+	}else if(num>=21&&num<=60){
+		ret_val = get1LevelPotion();
+	}else if(num>=61&&num<=90){
+		ret_val = get2LevelPotion();
+	}else if(num>=91&&num<=100){
+		ret_val = get3LevelPotion();
+	}else{
+		ret_val = num;
+	}
+	return "Potion of "+ret_val;
+}
+function get0LevelPotion(){
+	var ret_val;
+	var num = getRndInteger(1,100);
 
+	if(num>=1&&num<=14){
+		ret_val = "Arcane Mark";
+	}else if(num>=15&&num<=28){
+		ret_val = "Guidance";
+	}else if(num>=29&&num<=44){
+		ret_val = "Light";
+	}else if(num>=45&&num<=58){
+		ret_val = "Purify Food and Drink";
+	}else if(num>=59&&num<=72){
+		ret_val = "Resistance";
+	}else if(num>=73&&num<=86){
+		ret_val = "Stabilize";
+	}else if(num>=87&&num<=100){
+		ret_val = "Virtue";
+	}else{
+		ret_val = num;
+	}
+	return ret_val;
+}
+function get1LevelPotion(){
+	var ret_val;
+	var num = getRndInteger(1,100);
+
+	if(num>=1&&num<=14){
+		ret_val = "Arcane Mark";
+	}else if(num>=15&&num<=28){
+		ret_val = "Guidance";
+	}else if(num>=29&&num<=44){
+		ret_val = "Light";
+	}else if(num>=45&&num<=58){
+		ret_val = "Purify Food and Drink";
+	}else if(num>=59&&num<=72){
+		ret_val = "Resistance";
+	}else if(num>=73&&num<=86){
+		ret_val = "Stabilize";
+	}else if(num>=87&&num<=100){
+		ret_val = "Virtue";
+	}else{
+		ret_val = num;
+	}
+	return ret_val;
+}
+function get2LevelPotion(){
+	var ret_val;
+	var num = getRndInteger(1,100);
+
+	if(num>=1&&num<=14){
+		ret_val = "Arcane Mark";
+	}else if(num>=15&&num<=28){
+		ret_val = "Guidance";
+	}else if(num>=29&&num<=44){
+		ret_val = "Light";
+	}else if(num>=45&&num<=58){
+		ret_val = "Purify Food and Drink";
+	}else if(num>=59&&num<=72){
+		ret_val = "Resistance";
+	}else if(num>=73&&num<=86){
+		ret_val = "Stabilize";
+	}else if(num>=87&&num<=100){
+		ret_val = "Virtue";
+	}else{
+		ret_val = num;
+	}
+	return ret_val;
+}
+function get3LevelPotion(){
+	var ret_val;
+	var num = getRndInteger(1,100);
+
+	if(num>=1&&num<=14){
+		ret_val = "Arcane Mark";
+	}else if(num>=15&&num<=28){
+		ret_val = "Guidance";
+	}else if(num>=29&&num<=44){
+		ret_val = "Light";
+	}else if(num>=45&&num<=58){
+		ret_val = "Purify Food and Drink";
+	}else if(num>=59&&num<=72){
+		ret_val = "Resistance";
+	}else if(num>=73&&num<=86){
+		ret_val = "Stabilize";
+	}else if(num>=87&&num<=100){
+		ret_val = "Virtue";
+	}else{
+		ret_val = num;
+	}
+	return ret_val;
+}
 //##############################           RINGS
 
 
