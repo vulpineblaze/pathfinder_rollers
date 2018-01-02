@@ -17,25 +17,25 @@ function getRndInteger(min, max) {
 function getMagicItem(){
 	var ret_val;
 	var num = getRndInteger(1,100);
-	if(num>=1&&num<=5){
+	if(num>=1&&num<=15){
 		ret_val = getArmor();
-	}else if(num>=6&&num<=10){
+	}else if(num>=16&&num<=30){
 		ret_val = getShield();
-	}else if(num>=11&&num<=20){
+	}else if(num>=31&&num<=45){
 		ret_val = getWeapon();
-	}else if(num>=21&&num<=30){
+	}else if(num>=46&&num<=55){
 		ret_val = getPotion();
-	}else if(num>=31&&num<=40){
+	}else if(num>=56&&num<=64){
 		ret_val = "Rings";
-	}else if(num>=41&&num<=50){
+	}else if(num>=65&&num<=73){
 		ret_val = "Rods";
-	}else if(num>=51&&num<=65){
+	}else if(num>=74&&num<=82){
 		ret_val = "Scrolls";
-	}else if(num>=66&&num<=68){
+	}else if(num>=83&&num<=91){
 		ret_val = "Staves";
-	}else if(num>=69&&num<=83){
+	}else if(num>=92&&num<=98){
 		ret_val = "Wands";
-	}else if(num>=84&&num<=100){
+	}else if(num>=99&&num<=100){
 		ret_val = "Wondrous";
 	}else{
 		ret_val = num;
@@ -637,20 +637,58 @@ function get1LevelPotion(){
 	var ret_val;
 	var num = getRndInteger(1,100);
 
-	if(num>=1&&num<=14){
-		ret_val = "Arcane Mark";
-	}else if(num>=15&&num<=28){
-		ret_val = "Guidance";
-	}else if(num>=29&&num<=44){
-		ret_val = "Light";
-	}else if(num>=45&&num<=58){
-		ret_val = "Purify Food and Drink";
-	}else if(num>=59&&num<=72){
-		ret_val = "Resistance";
-	}else if(num>=73&&num<=86){
-		ret_val = "Stabilize";
-	}else if(num>=87&&num<=100){
-		ret_val = "Virtue";
+	if(num>=1&&num<=2){
+		ret_val = "Animate Rope";
+	}else if(num>=3&&num<=6){
+		ret_val = "Bless Weapon";
+	}else if(num>=7&&num<=16){
+		ret_val = "Cure Light Wounds";
+	}else if(num>=17&&num<=20){
+		ret_val = "Endure Elements";
+	}else if(num>=21&&num<=26){
+		ret_val = "Enlarge Person";
+	}else if(num>=27&&num<=29){
+		ret_val = "Erase";
+	}else if(num>=30&&num<=32){
+		ret_val = "Goodberry";
+	}else if(num>=33&&num<=34){
+		ret_val = "Grease";
+	}else if(num>=35&&num<=38){
+		ret_val = "Hide from Animals";
+	}else if(num>=39&&num<=42){
+		ret_val = "Hide from Undead";
+	}else if(num>=43&&num<=44){
+		ret_val = "Hold Portal";
+	}else if(num>=45&&num<=48){
+		ret_val = "Jump";
+	}else if(num>=49&&num<=52){
+		ret_val = "Mage Armor";
+	}else if(num>=53&&num<=56){
+		ret_val = "Magic Fang";
+	}else if(num>=57&&num<=60){
+		ret_val = "Magic Stone";
+	}else if(num>=61&&num<=64){
+		ret_val = "Magic Weapon";
+	}else if(num>=65&&num<=68){
+		ret_val = "Pass without trace";
+	}else if(num>=69&&num<=71){
+		ret_val = "Protection from Chaos";
+	}else if(num>=72&&num<=74){
+		ret_val = "Protection from Evil";
+	}else if(num>=75&&num<=77){
+		ret_val = "Protection from Good";
+	}else if(num>=78&&num<=80){
+		ret_val = "Protection from Law";
+	}else if(num>=81&&num<=84){
+		ret_val = "Reduce Person";
+	}else if(num>=85&&num<=88){
+		ret_val = "Remove Fear";
+	}else if(num>=89&&num<=92){
+		ret_val = "Sanctuary";
+	}else if(num>=93&&num<=96){
+		ret_val = "Shield of Faith";
+	}else if(num>=97&&num<=100){
+		ret_val = "Shillelagh";
 	}else{
 		ret_val = num;
 	}
@@ -660,20 +698,78 @@ function get2LevelPotion(){
 	var ret_val;
 	var num = getRndInteger(1,100);
 
-	if(num>=1&&num<=14){
-		ret_val = "Arcane Mark";
-	}else if(num>=15&&num<=28){
-		ret_val = "Guidance";
-	}else if(num>=29&&num<=44){
-		ret_val = "Light";
-	}else if(num>=45&&num<=58){
-		ret_val = "Purify Food and Drink";
-	}else if(num>=59&&num<=72){
-		ret_val = "Resistance";
-	}else if(num>=73&&num<=86){
-		ret_val = "Stabilize";
-	}else if(num>=87&&num<=100){
-		ret_val = "Virtue";
+	if(num>=1&&num<=2){
+		ret_val = "Aid";
+	}else if(num>=3&&num<=4){
+		ret_val = "Align Weapon";
+	}else if(num>=5&&num<=6){
+		ret_val = "Arcane Lock";
+	}else if(num>=7&&num<=10){
+		ret_val = "Barkskin";
+	}else if(num>=11&&num<=15){
+		ret_val = "Bears Endurance";
+	}else if(num>=16&&num<=17){
+		ret_val = "Blur";
+	}else if(num>=18&&num<=22){
+		ret_val = "Bulls Strength";
+	}else if(num>=23&&num<=26){
+		ret_val = "Cats Grace";
+	}else if(num>=27&&num<=36){
+		ret_val = "Cure Moderate Wound";
+	}else if(num>=37&&num<=37){
+		ret_val = "Darkness";
+	}else if(num>=38&&num<=40){
+		ret_val = "Dark Vision";
+	}else if(num>=41&&num<=43){
+		ret_val = "Delay Poison";
+	}else if(num>=44&&num<=46){
+		ret_val = "Eagles Splendor";
+	}else if(num>=47&&num<=49){
+		ret_val = "Foxs Cunning";
+	}else if(num>=50&&num<=51){
+		ret_val = "Gentle Repose";
+	}else if(num>=52&&num<=57){
+		ret_val = "Invisibility";
+	}else if(num>=58&&num<=61){
+		ret_val = "Levitate";
+	}else if(num>=62&&num<=62){
+		ret_val = "Make Whole";
+	}else if(num>=63&&num<=64){
+		ret_val = "Obscure Object";
+	}else if(num>=65&&num<=67){
+		ret_val = "Owls Wisdom";
+	}else if(num>=68&&num<=69){
+		ret_val = "Protection from Arrows";
+	}else if(num>=70&&num<=70){
+		ret_val = "Reduce Animal";
+	}else if(num>=71&&num<=73){
+		ret_val = "Remove Paralysis";
+	}else if(num>=74&&num<=74){
+		ret_val = "Resist Energy, Acid";
+	}else if(num>=75&&num<=75){
+		ret_val = "Resist Energy, Cold";
+	}else if(num>=76&&num<=76){
+		ret_val = "Resist Energy, Electicity";
+	}else if(num>=77&&num<=77){
+		ret_val = "Resist Energy, Fire";
+	}else if(num>=78&&num<=78){
+		ret_val = "Resist Energy, Sonic";
+	}else if(num>=79&&num<=83){
+		ret_val = "Rope Trick";
+	}else if(num>=84&&num<=86){
+		ret_val = "Shatter";
+	}else if(num>=87&&num<=90){
+		ret_val = "Spider Climb";
+	}else if(num>=91&&num<=92){
+		ret_val = "Status";
+	}else if(num>=93&&num<=94){
+		ret_val = "Undetectable Alignment";
+	}else if(num>=95&&num<=96){
+		ret_val = "Warp wood";
+	}else if(num>=97&&num<=98){
+		ret_val = "Wood Shape";
+	}else if(num>=99&&num<=100){
+		ret_val = "Continual Flame";
 	}else{
 		ret_val = num;
 	}
@@ -683,20 +779,66 @@ function get3LevelPotion(){
 	var ret_val;
 	var num = getRndInteger(1,100);
 
-	if(num>=1&&num<=14){
-		ret_val = "Arcane Mark";
-	}else if(num>=15&&num<=28){
-		ret_val = "Guidance";
-	}else if(num>=29&&num<=44){
-		ret_val = "Light";
-	}else if(num>=45&&num<=58){
-		ret_val = "Purify Food and Drink";
-	}else if(num>=59&&num<=72){
-		ret_val = "Resistance";
-	}else if(num>=73&&num<=86){
-		ret_val = "Stabilize";
-	}else if(num>=87&&num<=100){
-		ret_val = "Virtue";
+	if(num>=1&&num<=10){
+		ret_val = "Cure Serious Wounds";
+	}else if(num>=11&&num<=12){
+		ret_val = "Daylight";
+	}else if(num>=13&&num<=14){
+		ret_val = "Dispel Magic";
+	}else if(num>=15&&num<=18){
+		ret_val = "Displacement";
+	}else if(num>=19&&num<=20){
+		ret_val = "Fire Trap";
+	}else if(num>=21&&num<=22){
+		ret_val = "Flame Arrow";
+	}else if(num>=23&&num<=28){
+		ret_val = "Fly";
+	}else if(num>=29&&num<=34){
+		ret_val = "Gaseous";
+	}else if(num>=35&&num<=36){
+		ret_val = "Good Hope";
+	}else if(num>=37&&num<=42){
+		ret_val = "Haste";
+	}else if(num>=43&&num<=48){
+		ret_val = "Heroism";
+	}else if(num>=49&&num<=52){
+		ret_val = "Keen edge";
+	}else if(num>=53&&num<=56){
+		ret_val = "Magic Fang, Greater";
+	}else if(num>=57&&num<=59){
+		ret_val = "Magic vestment";
+	}else if(num>=60&&num<=62){
+		ret_val = "Neutralize Poison";
+	}else if(num>=63&&num<=63){
+		ret_val = "Protection from Energy, Acid";
+	}else if(num>=64&&num<=64){
+		ret_val = "Protection from Energy, Cold";
+	}else if(num>=65&&num<=65){
+		ret_val = "Protection from Energy, Electricity";
+	}else if(num>=66&&num<=66){
+		ret_val = "Protection from Energy, Fire";
+	}else if(num>=67&&num<=67){
+		ret_val = "Protection from Energy, Sonic";
+	}else if(num>=68&&num<=71){
+		ret_val = "Rage";
+	}else if(num>=72&&num<=75){
+		ret_val = "Remove Blindness/Deafness";
+	}else if(num>=76&&num<=79){
+		ret_val = "Remove Curse";
+	}else if(num>=80&&num<=83){
+		ret_val = "Remove Disease";
+	}else if(num>=84&&num<=85){
+		ret_val = "Shrink Item";
+	}else if(num>=86&&num<=87){
+		ret_val = "Stone Shape";
+	}else if(num>=88&&num<=91){
+		ret_val = "Tongues";
+	}else if(num>=92&&num<=95){
+		ret_val = "Water Breathing";
+	}else if(num>=96&&num<=98){
+		ret_val = "Water Walk";
+	}else if(num>=99&&num<=100){
+		ret_val = "Non-Detection";
 	}else{
 		ret_val = num;
 	}
