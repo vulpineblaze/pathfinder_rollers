@@ -26,17 +26,17 @@ function getMagicItem(){
 	}else if(num>=46&&num<=55){
 		ret_val = getPotion();
 	}else if(num>=56&&num<=64){
-		ret_val = "Rings";
+		ret_val = getRing();
 	}else if(num>=65&&num<=73){
-		ret_val = "Rods";
+		ret_val = getRod();
 	}else if(num>=74&&num<=82){
-		ret_val = "Scrolls";
+		ret_val = getScroll();
 	}else if(num>=83&&num<=91){
-		ret_val = "Staves";
+		ret_val = getStaff();
 	}else if(num>=92&&num<=98){
-		ret_val = "Wands";
+		ret_val = getWand();
 	}else if(num>=99&&num<=100){
-		ret_val = "Wondrous";
+		ret_val = getWondrous();
 	}else{
 		ret_val = num;
 	}
@@ -847,25 +847,214 @@ function get3LevelPotion(){
 //##############################           RINGS
 
 
+function getRing(){
+	var ret_val;
+	var num = getRndInteger(1,100);
+
+	if(num>=1&&num<=18){
+		ret_val = "Protection +1";
+	}else if(num>=19&&num<=28){
+		ret_val = "Feather Falling";
+	}else if(num>=29&&num<=36){
+		ret_val = "Sustenance";
+	}else if(num>=37&&num<=44){
+		ret_val = "Climbing";
+	}else if(num>=45&&num<=52){
+		ret_val = "Jumping";
+	}else if(num>=53&&num<=60){
+		ret_val = "Swimming";
+	}else if(num>=61&&num<=70){
+		ret_val = "Counterspells";
+	}else if(num>=71&&num<=75){
+		ret_val = "Mind Shielding";
+	}else if(num>=76&&num<=80){
+		ret_val = "Protection +2";
+	}else if(num>=81&&num<=85){
+		ret_val = "Force Shield";
+	}else if(num>=86&&num<=90){
+		ret_val = "The Ram";
+	}else if(num>=91&&num<=93){
+		ret_val = "Animal Friendship";
+	}else if(num>=94&&num<=96){
+		ret_val = "Energy Resistance, Minor";
+	}else if(num>=97&&num<=98){
+		ret_val = "Chameleon Power";
+	}else if(num>=99&&num<=100){
+		ret_val = "Water Walking";
+	}else{
+		ret_val = num;
+	}
+	return "Ring of "+ret_val;
+}
+
 
 //##############################           RODS
 
 
 
+function getRod(){
+	var ret_val;
+	var num = getRndInteger(1,100);
+
+	if(num>=1&&num<=07){
+		ret_val = "Metamagic, Enlarge, lesser";
+	}else if(num>=8&&num<=14){
+		ret_val = "Metamagic, Extend, lesser";
+	}else if(num>=29&&num<=21){
+		ret_val = "Metamagic, Silent, lesser";
+	}else if(num>=22&&num<=28){
+		ret_val = "Immoveable";
+	}else if(num>=29&&num<=35){
+		ret_val = "Metamagic, Empower, lesser";
+	}else if(num>=36&&num<=42){
+		ret_val = "Metal and Mineral detection";
+	}else if(num>=43&&num<=53){
+		ret_val = "Cancellation";
+	}else if(num>=54&&num<=57){
+		ret_val = "Metamagic, Enlarge";
+	}else if(num>=58&&num<=61){
+		ret_val = "Metamagic, Extend";
+	}else if(num>=62&&num<=65){
+		ret_val = "Metamagic, Silent";
+	}else if(num>=66&&num<=71){
+		ret_val = "Wonder";
+	}else if(num>=72&&num<=79){
+		ret_val = "Python";
+	}else if(num>=80&&num<=83){
+		ret_val = "Metamagic, Maximize, lesser";
+	}else if(num>=84&&num<=89){
+		ret_val = "Flame Extinguishing";
+	}else if(num>=90&&num<=97){
+		ret_val = "Viper";
+	}else if(num>=98&&num<=99){
+		ret_val = "Metamagic, Empower";
+	}else if(num>=100&&num<=100){
+		ret_val = "Metamagic, Quicken, lesser";
+	}else{
+		ret_val = num;
+	}
+	return "Rod of "+ret_val;
+}
+
+
 //##############################           SCROLLS
 
+
+function getScroll(){
+	var ret_val;
+	var num = getRndInteger(1,100);
+
+	if(num>=1&&num<=70){
+		ret_val = getArcaneScroll();
+	}else if(num>=71&&num<=100){
+		ret_val = getDivineScroll();
+	}else{
+		ret_val = num;
+	}
+	return ret_val;
+}
+function getArcaneScroll(){
+	var ret_val;
+	var num = getRndInteger(1,100);
+
+	if(num>=1&&num<=5){
+		ret_val = "0th Level Arcane Scroll, Table 5-27 page 125 GMG, "+getRndInteger(1,100);
+	}else if(num>=06&&num<=50){
+		ret_val = "1st Level Arcane Scroll, Table 5-28 page 126 GMG, "+getRndInteger(1,100);
+	}else if(num>=51&&num<=95){
+		ret_val = "2nd Level Arcane Scroll, Table 5-29 page 126 GMG, "+getRndInteger(1,100);
+	}else if(num>=96&&num<=100){
+		ret_val = "3rd Level Arcane Scroll, Table 5-30 page 126 GMG, "+getRndInteger(1,100);
+	}else{
+		ret_val = num;
+	}
+	return ret_val;
+}
+function getDivineScroll(){
+	var ret_val;
+	var num = getRndInteger(1,100);
+
+	if(num>=1&&num<=5){
+		ret_val = "0th Level Divine Scroll, Table 5-37 page 130 GMG, "+getRndInteger(1,100);
+	}else if(num>=06&&num<=50){
+		ret_val = "1st Level Divine Scroll, Table 5-38 page 130 GMG, "+getRndInteger(1,100);
+	}else if(num>=51&&num<=95){
+		ret_val = "2nd Level Divine Scroll, Table 5-39 page 131 GMG, "+getRndInteger(1,100);
+	}else if(num>=96&&num<=100){
+		ret_val = "3rd Level Divine Scroll, Table 5-40 page 131 GMG, "+getRndInteger(1,100);
+	}else{
+		ret_val = num;
+	}
+	return ret_val;
+}
 
 
 //##############################           STAVES
 
 
 
+function getStaff(){
+	var ret_val;
+	var num = getRndInteger(1,100);
+
+	if(num>=1&&num<=15){
+		ret_val = "Charming";
+	}else if(num>=16&&num<=28){
+		ret_val = "Fire";
+	}else if(num>=31&&num<=36){
+		ret_val = "Swarming Insects";
+	}else if(num>=41&&num<=44){
+		ret_val = "Size Alteration";
+	}else if(num>=56&&num<=52){
+		ret_val = "Healing";
+	}else if(num>=76&&num<=90){
+		ret_val = "Frost";
+	}else if(num>=91&&num<=70){
+		ret_val = "Illumination";
+	}else if(num>=96&&num<=100){
+		ret_val = "Defense";
+	}else{
+		ret_val = num;
+	}
+	return "Ring of "+ret_val;
+}
+
+
 //##############################           WANDS
 
+
+function getWand(){
+	var ret_val;
+	var num = getRndInteger(1,100);
+
+	if(num>=1&&num<=5){
+		ret_val = "0th Level Wand, Table 5-48 page 134 GMG, "+getRndInteger(1,100);
+	}else if(num>=06&&num<=60){
+		ret_val = "1st Level Wand, Table 5-49 page 134 GMG, "+getRndInteger(1,100);
+	}else if(num>=61&&num<=100){
+		ret_val = "2nd Level Wand, Table 5-50 page 135 GMG, "+getRndInteger(1,100);
+	}else{
+		ret_val = num;
+	}
+	return ret_val;
+}
 
 
 //##############################           WONDROUS
 
+
+
+function getWondrous(){
+	var ret_val;
+	var num = getRndInteger(1,100);
+
+	if(num>=1&&num<=100){
+		ret_val = "Wondrous, Table 15-18, page 497 Corebook, "+getRndInteger(1,100);
+	}else{
+		ret_val = num;
+	}
+	return ret_val;
+}
 
 
 </script>
